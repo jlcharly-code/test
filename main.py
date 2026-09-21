@@ -33,6 +33,10 @@ def the_book():
 def el_libro():
 	return render_template("el_libro.html")
 	
+@app.route("/o-sepulcro")
+def o_sepulcro():
+       return render_template("o_livro.html")
+	
 
 if __name__ == "__main__":
     app.run(debug=True)
