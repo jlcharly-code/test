@@ -1,0 +1,16 @@
+figure img {
+    max-width: 200px;
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.cover-img {
+    float: left;
+    max-width: 250px;
+    width: 40%;
+    height: auto;
+    margin: 0 20px 15px 0;
+}
+
