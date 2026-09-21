@@ -13,10 +13,19 @@
 </figure>
         <strong><nav>
           <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('the_book') }}">English translation</a></li>
-          </ul>
+            <li><a href="{{ url_for('home') }}">Livres</a></li>
+            <li><a href="{{ url_for('about') }}">Au sujet du site</a></li>
+			<li>
+				<img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/fr.webp') }}" />
+						<a href="{{ url_for('le_livre') }}">Edition française</a>
+  &nbsp;|&nbsp;
+				<img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/gb.webp') }}" />
+						<a href="{{ url_for('the_book') }}">English translation</a>
+  &nbsp;|&nbsp;
+				<img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/es.webp') }}" />
+						<a href="{{ url_for('el_libro') }}">Traducción al español</a>
+			</li>          
+		   </ul>
         </nav></strong>
       </div>
     </header>

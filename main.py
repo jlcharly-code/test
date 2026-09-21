@@ -21,9 +21,18 @@ def home():
 def about():
     return render_template("about.html")
     
+@app.route("/le-livre")
+def le_livre():
+    return render_template("le_livre.html")
+    
 @app.route("/the-book")
 def the_book():
     return render_template("the_book.html")
+    
+@app.route("/el-libro")
+def el_libro():
+	return render_template("el_libro.html")
+	
 
 if __name__ == "__main__":
     app.run(debug=True)
