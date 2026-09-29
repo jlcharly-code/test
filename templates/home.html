@@ -1,61 +1,50 @@
-<!DOCTYPE html>
+{% extends "template.html" %} 
+{% block title %}Les livres{% endblock %} 
 
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Mes travaux d'édition</title>
-  </head>
-  <body>
-	{% extends "template.html" %}
-    {% block content %} 
-	  
-    <h1> Livres </h1>
-    <p>Première édition</p>
-    <p> Le tombeau de Jacques Molai! </p>
+{% block content %}
+<div class="conteneur-principal">
+
+  <!-- BLOC PREMIER LIVRE (Image + Titres alignés proprement) -->
+  <div class="bloc-livre">
   
-  
-   <h2> Cadet de Gassicourt </h2>  
-   <figure>
-  <img class="cover-img" src="https://res.cloudinary.com/dxcap6jy/image/upload/v1790004840/cadet.webp" />
-</figure>
-   <p> Auteur du livre, écrit pour la première fois en 1795. </p>
-   <h2>Sa vie: </h2>
-   <p>Officiellement, il est le fils de Louis Claude Cadet de Gassicourt et de Marie Thérèse Françoise Boisselet. </p>
-   
-   <p>Cependant, dans ses Mémoires, son ami le baron Thiébault prétend qu'il était le fruit des amours de Louis XV et de Marie Thérèse Françoise Boisselet. </p>
-   
-	<p> Son père souhaitait lui faire étudier la pharmacie, mais le jeune homme, qui rencontrait chez ses parents des hommes de lettres tels que d'Alembert, 
-   Buffon ou Condorcet, voulut se consacrer à la littérature. </p>
-   
-   <p>Il fit des études de droit et devint avocat, plaidant avec éloquence et un certain succès. </p>
-   
-   <p>Le 8 janvier 1789, il épousa, à Paris, Madeleine Félicité Baudet.</p>
-Lorsque la Révolution éclata, Cadet de Gassicourt y adhéra avec enthousiasme, mais il n'hésita pas à condamner les excès du Tribunal révolutionnaire. </p>
+    <div class="bloc-livre-texte">
+      <h1>PREMIER LIVRE</h1>
+      <h2>le tombeau de jacques molai!</h2>
+      <p>Il faudrait imaginer que l’histoire officielle n’est qu’un voile tendu sur une réalité bien plus secrète. 
+      Si l’Ordre du Temple s’est éteint dans les flammes des bûchers en 1312, son esprit, lui, n'aurait jamais cessé de voyager dans l'ombre. 
+      Au cours du XVIIIe siècle, alors que l'Europe des Lumières se passionnait pour l'occulte, une poignée d'initiés aurait ravivé la flamme endormie de la chevalerie à travers les rituels de la Stricte Observance.</p>
+    </div>
+  </div>
 
-<p>Il publia des chansons patriotiques et un Cahier de réformes, ou Vœux d'un ami de l'ordre.
-Accusé d'avoir participé au 13 vendémiaire à la tête de la section du Mont-Blanc en 1795, il fut condamné par contumace, 
+  <!-- ZONE DE LIENS / LANGUES -->
+  <div class="zone-langues">
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/fr.webp') }}" />
+    <a href="{{ url_for('le_livre') }}">Edition française</a>
+    <span class="separateur">|</span>
+    
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/gb.webp') }}" />
+    <a href="{{ url_for('the_book') }}">English translation</a>
+    <span class="separateur">|</span>
+    
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/es.webp') }}" />					
+    <a href="{{ url_for('el_libro') }}">Traducción al español</a> 
+    <span class="separateur">|</span>  
+    
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/pt.webp') }}" />
+    <a href="{{ url_for('o_sepulcro') }}">Tradução em português</a>
+  </div>
 
-ce qui l'obligea à se cacher trois ans dans le Berry. La condamnation fut annulée plus tard par le jury criminel de la Seine. </p>
+  <!-- BLOC SECOND LIVRE -->
+  <div class="bloc-livre">
+    <div class="bloc-livre-texte">
+      <h1>SECOND LIVRE</h1>
+      <h2>Mémoires pour servir à l'histoire du jacobinisme</h2>
+      <a href="{{ url_for('memoires') }}">Mémoires pour servir à l'histoire du jacobinisme</a>
+      <p>de L'Abbé Augustin Barruel s.</p>
+      <h3>Abrégé par E. Perrenet en 1911</h3>
+      <p>restructuré par Jean-Luc CHARLIER</p>
+    </div>
+  </div>
 
-<p>À son retour, il se mit à la pharmacie et fut nommé premier pharmacien de Napoléon en 1809.</p>
-<p>Il devint successivement membre de deux célèbres goguettes parisiennes : les diners du Vaudeville et le Caveau moderne.</p>
-<p>Parallèlement, il publia de nombreux ouvrages sur les sciences, parmi lesquels, 
-
-en 1803, un Dictionnaire de la chimie qui reprend les notions développées par Pierre Joseph Macquer quarante ans plus tôt, 
-
-en les actualisant, grâce aux découvertes de Lavoisier notamment.</p> <p>Il se moqua de Madame de Staël et de Chateaubriand, 
-
-et composa un ouvrage souvent cité sur les Templiers. </p>
-
-<p>Pharmacien de Napoléon dans plusieurs campagnes, il fut secrétaire de la section de pharmacie à la création de l'Académie de médecine, 
-
-et secrétaire du Conseil de Salubrité de la ville de Paris qu'il contribua à faire établir.</p>
-<p>Sous la Restauration, il s'opposa au droit divin.</p>
-
-
-<p>Il est inhumé au cimetière du Père-Lachaise (division 39) auprès de son fils, Félix Cadet de Gassicourt, 
-pharmacien, et de son petit-fils, Ernest Cadet de Gassicourt, médecin, membre de l'Académie de médecine.
-</p>
- {% endblock %}
-</body>
-</html>
+</div>
+{% endblock %}

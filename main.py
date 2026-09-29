@@ -36,6 +36,15 @@ def el_libro():
 @app.route("/o-sepulcro")
 def o_sepulcro():
        return render_template("o_livro.html")
+       
+@app.route("/templiers")
+def templiers():
+       return render_template("templiers.html")
+       
+@app.route("/memoires")
+def memoires():
+       return render_template("memoires.html")
+       
 	
 
 if __name__ == "__main__":

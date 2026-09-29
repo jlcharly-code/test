@@ -1,21 +1,57 @@
-figure img {
-    max-width: 200px;
-    width: 20%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* Nettoyage des anciennes règles qui posaient problème */
+ul, ol, h2 {
+    clear: none; /* On enlève le clear qui cassait tout */
+}
+
+/* --- STRUCTURE ENFANT --- */
+.conteneur-principal {
+    display: flex;
+    flex-direction: column;   
+    align-items: flex-start;  
+    gap: 30px;                
+    width: 100%;
+    margin-top: 20px; /* Ajoute un espace sain sous le menu du template */
+}
+
+/* Alignement de la couverture à gauche et du texte à droite */
+.bloc-livre {
+    display: flex;
+    flex-direction: row;      
+    align-items: flex-start;
+    gap: 20px;                
+    width: 100%;
+}
+
+.bloc-livre-texte {
+    display: flex;
+    flex-direction: column;   
+    gap: 5px;
 }
 
 .cover-img {
-    float: left;
-    max-width: 150px;
-    width: 40%;
+    width: 150px;             
     height: auto;
-    margin: 0 20px 15px 0;
+    display: block;
 }
+
+/* --- ZONE DES DRAPEAUX --- */
+.zone-langues {
+    display: flex;
+    flex-wrap: wrap;          
+    align-items: center;
+    gap: 8px;                 
+    margin: 10px 0;
+    width: 100%;
+}
+
 .drapeaux-img {
-    max-width: 15px;
-    width: auto;
-    height: auto;
+    width: 20px !important;   
+    height: auto !important;
     vertical-align: middle;
-    margin: 0 4px 0 0;
+    display: inline-block;
+}
+
+.separateur {
+    color: #ccc;
+    padding: 0 4px;
+}
