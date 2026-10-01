@@ -1,14 +1,15 @@
 {% extends "template.html" %} 
-{% block title %}Les livres{% endblock %} 
-{% block content %}
 
- <!-- Balises Open Graph dynamiques -->
+<!-- Balises Open Graph dynamiques -->
     <meta property="og:title" content="{% block og_title %}Les livres{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Découvrez les livres publiés par JL Charly.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/livre_ouvert.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
-    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+{% block title %}Les livres{% endblock %} 
 
+{% block content %}
 
 <div class="conteneur-principal">
 
@@ -27,19 +28,19 @@
   <!-- ZONE DE LIENS / LANGUES -->
   <div class="zone-langues">
     <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/fr.webp') }}" />
-    <a href="{{ url_for('le_livre') }}">Edition française</a>
+    <a href="{{ url_for('le_livre') }}" target="_blank" rel="noopener">Edition française</a>
     <span class="separateur">|</span>
     
     <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/gb.webp') }}" />
-    <a href="{{ url_for('the_book') }}">English translation</a>
+    <a href="{{ url_for('the_book') }}" target="_blank" rel="noopener">English translation</a>
     <span class="separateur">|</span>
     
     <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/es.webp') }}" />					
-    <a href="{{ url_for('el_libro') }}">Traducción al español</a> 
+    <a href="{{ url_for('el_libro') }}" target="_blank" rel="noopener">Traducción al español</a> 
     <span class="separateur">|</span>  
     
     <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/pt.webp') }}" />
-    <a href="{{ url_for('o_sepulcro') }}">Tradução em português</a>
+    <a href="{{ url_for('o_sepulcro') }}" target="_blank" rel="noopener">Tradução em português</a>
   </div>
 
   <!-- BLOC SECOND LIVRE -->
@@ -47,7 +48,7 @@
     <div class="bloc-livre-texte">
       <h1>SECOND LIVRE</h1>
       <h2>Mémoires pour servir à l'histoire du jacobinisme</h2>
-      <a href="{{ url_for('memoires') }}">Mémoires pour servir à l'histoire du jacobinisme</a>
+      <a href="{{ url_for('memoires') }}" target="_blank" rel="noopener">Mémoires pour servir à l'histoire du jacobinisme</a>
       <p>de L'Abbé Augustin Barruel</p>
       <h3>Abrégé par E. Perrenet en 1911</h3>
       <p>restructuré par Jean-Luc CHARLIER</p>

@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 {% extends "template.html" %}
+
+<meta property="og:title" content="{% block og_title %}Archives sur les Templiers et autres PDF{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/Cross-Pattee.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
 {% block title %}Archives sur les Templiers{% endblock %}
 {% block content %}
 
@@ -7,7 +14,7 @@
     <meta property="og:description" content="{% block og_description %}Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/Cross-Pattee.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
-    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
     
 <h1>Archives sur les Templiers et autres PDF</h1>
 <p>Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets.</p>
@@ -18,13 +25,13 @@
 <div class="document">
   <h3>Le procès des templiers</h3>
   <p>en cours de retranscription</p>
-  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790721008/Le_proc%C3%A8s_des_templiers_%C3%A0_propos_d_un.pdf">Télécharger le PDF </a>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790721008/Le_proc%C3%A8s_des_templiers_%C3%A0_propos_d_un.pdf" target="_blank" rel="noopener">Télécharger le PDF </a>
 </div>
 
 <div class="document">
   <h3>Défense des Templiers </h3>
   <p>en cours de retranscription]</p>
-  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790721016/D%C3%A9fense_des_templiers_contre_la_routine.pdf">Télécharger le PDF</a>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790721016/D%C3%A9fense_des_templiers_contre_la_routine.pdf" target="_blank" rel="noopener">Télécharger le PDF</a>
 </div>
 
 <h4><strong>Dossiers</strong> secrets :</h4>
@@ -34,14 +41,14 @@
   <p>Trois manuscrits de l'archive templière secrète de France (FM.P761/762/763),</p><p> des lettres 
   attribuées au templier Roncelin de Fos adressées à Richard de Vichiers, datées de 1245, 1256 
   et 1270.</p>
-  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790718089/dossiers_secrets.pdf">Télécharger le texte original (italien)</a>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790718089/dossiers_secrets.pdf" target="_blank" rel="noopener">Télécharger le texte original (italien)</a>
 </div>
 
 <div class="document">
   <h3>Les lettres de Roncelin de Fos — édition illustrée (français)</h3>
   <p>Ma traduction française, réalisée en 2014, enrichie d'illustrations et de complément (toujours en cours)s</p> <p>
   historiques (Pieusse, la bataille de La Forbie, la grotte de Niaux, le siège de Damiette).</p>
-  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790718089/dossiers_secrets_ill.pdf">Télécharger l'édition illustrée (français)</a>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790718089/dossiers_secrets_ill.pdf" target="_blank" rel="noopener">Télécharger l'édition illustrée (français)</a>
 </div>
 
 <h3>Sur le Jacobisme</h3>

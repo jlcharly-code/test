@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 {% extends "template.html" %}
-
-{% block content %}
-{% block title %}El Sepulcro de Jacques Molai, traducción al español{% endblock %}
-
 <meta property="og:title" content="{% block og_title %}El Sepulcro de Jacques Molai){% endblock %}">
     <meta property="og:description" content="{% block og_description %}Version espagnole du Tombeau de Jacques Molai.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/El_Sepulcro_epub_47cf66.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
-    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+{% block content %}
+
+{% block title %}El Sepulcro de Jacques Molai, traducción al español{% endblock %}
+
+	
     
 <h1 class="unnumbered" id="El-libro">El Sepulcro de Jacques Molai</h1>
-<p><strong><u>El libro está aquí</u></strong></p>  <p>Se vende :<a href="https://www.amazon.com/gp/product/B0HK6BW1LL?storeType=ebooks">El Sepulcro de Jacques Molai</a>   </p>
+<p><strong><u>El libro está aquí</u></strong></p>  <p>Se vende :<a href="https://www.amazon.com/gp/product/B0HK6BW1LL?storeType=ebooks" target="_blank" rel="noopener">El Sepulcro de Jacques Molai</a>   </p>
   <img class="cover-img" src="https://res.cloudinary.com/dxcap6jy/image/upload/v1790796326/El_Sepulcro_epub_47cf66.webp" alt="capa del libro El Sepulcro de Jacques Molai para Jean-Luc Charlier"/>
 </figure>
 

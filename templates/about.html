@@ -1,10 +1,13 @@
 {% extends "template.html" %}
-{% block title %}Au sujet du site{% endblock %}
+
 <meta property="og:title" content="{% block og_title %}Au sujet du site{% endblock %}">
     <meta property="og:description" content="{% block og_description %}description du site{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/barruel.jpg{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
-    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+{% block title %}Au sujet du site{% endblock %}
+
 {% block content %}
 <h1>Pourquoi ?</h1>
 <p>C'est important, pour moi, de mettre en avant mes projets enfin réalisés.</p>
