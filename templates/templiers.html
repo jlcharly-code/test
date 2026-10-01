@@ -2,7 +2,14 @@
 {% extends "template.html" %}
 {% block title %}Archives sur les Templiers{% endblock %}
 {% block content %}
-<h1>Archives sur les Templiers et autres PDF's</h1>
+
+<meta property="og:title" content="{% block og_title %}Archives sur les Templiers et autres PDF{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/Cross-Pattee.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    
+<h1>Archives sur les Templiers et autres PDF</h1>
 <p>Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets.</p>
 
 <h2>Mes PDF's originaux</h2>

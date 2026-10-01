@@ -5,6 +5,12 @@
 {% block content %}
 {% block title %}The Tomb of Jacques Molai, English translation{% endblock %}
 
+<meta property="og:title" content="{% block og_title %}The Tomb of Jacques Molai, English translation{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}this is the English translation of Tombeau de Jacques Molai.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/pochette-eng.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    
 <h1 class="unnumbered" id="the-book">The Tomb of Jacques Molai</h1>
 <p><strong><u>Here you go — this is the English translation:</u></strong></p> <p>to buy: :<a href="https://www.amazon.com/gp/product/B0HK46BFLL?storeType=ebooks">The tomb of Jacques Molai</a>   </p>
 <figure>

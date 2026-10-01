@@ -4,6 +4,12 @@
 
 {% block title %}O Sepulcro de Jacques Molai, tradução em português{% endblock %}
 
+<meta property="og:title" content="{% block og_title %}O Sepulcro de Jacques Molai, tradução em português{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Version portugaise du Tombeau de Jacques Molai.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/o_sepulcro_epub_47cf66.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    
 <h1 class="unnumbered" id="O-livro">O Sepulcro de Jacques Molai</h1>
 <p><strong><u>O livro está aqui.</u></strong></p> <p>à venda:<a href="https://www.amazon.com/gp/product/B0HK6NMMT3?storeType=ebooks">O Sepulcro de Jacques Molai</a>   </p>
 <figure>

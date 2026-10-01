@@ -3,7 +3,12 @@
 {% extends "template.html" %}
 
 {% block content %}
-
+<meta property="og:title" content="{% block og_title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}édition abrégée par E. Perrenet (1911).{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/barruel.jpg{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}websitet{% endblock %}">
+    
 {% block title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}
 <h1 class="unnumbered" id="jacobisme">Mémoires pour servir à l’histoire du jacobinisme</h1>
 <p><strong><u>Le voici: </u></strong></p> <p>En vente sur - pas encore<a href="" ></a>  </p>

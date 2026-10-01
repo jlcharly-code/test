@@ -4,6 +4,21 @@
   <meta charset="utf-8">
   <title>{% block title %}Mes travaux d'édition{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+    <!-- Balises Open Graph dynamiques -->
+    <meta property="og:title" content="{% block og_title %}Mes travaux d'édition{{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Découvrez les livres publiés par JL Charly.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/livre_ouvert.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-96x96.png') }}" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}" />
+	<meta name="apple-mobile-web-app-title" content="jlcharly-edition.fr" />
+	<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}" />
+
 </head>
 <body>
   <header>
