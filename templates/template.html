@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
 
     <!-- Balises Open Graph dynamiques -->
-    <meta property="og:title" content="{% block og_title %}Mes travaux d'édition{{% endblock %}">
+    <meta property="og:title" content="{% block og_title %}Mes travaux d'édition{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Découvrez les livres publiés par JL Charly.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/livre_ouvert.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
