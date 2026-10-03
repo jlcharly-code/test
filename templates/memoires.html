@@ -1,12 +1,17 @@
 {% extends "template.html" %}
 
-<meta property="og:title" content="{% block og_title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}">
+{% block lang %}fr{% endblock %}
+{% block title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}
+{% block description %}ce livre vient en complément des recherches sur Cadet de Gassicourt{% endblock %}
+{% block og_title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}
+
+
+	<meta property="og:title" content="{% block og_title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}">
     <meta property="og:description" content="{% block og_description %}édition abrégée par E. Perrenet (1911).{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/barruel.jpg{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
  
-{% block title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %} 
     
 {% block content %}
 	

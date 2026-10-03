@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+{% extends "template.html" %} 
+
+{% block lang %}fr{% endblock %}
+{% block title %}Le Tombeau de Jacques Molai (français){% endblock %}
+{% block description %}Le Tombeau de Jacques Molai, de Jean-Luc Charlier.{% endblock %}
+{% block og_title %}Le Tombeau de Jacques Molai (français){% endblock %}
 
 {% block hreflang %}
   <link rel="alternate" hreflang="fr" href="https://www.jlcharly-edition.fr/le-livre">
@@ -6,14 +11,13 @@
   <link rel="alternate" hreflang="es" href="https://www.jlcharly-edition.fr/el-libro">
   <link rel="alternate" hreflang="pt" href="https://www.jlcharly-edition.fr/o-sepulcro">
 {% endblock %}
-{% extends "template.html" %}<!-- Balises Open Graph dynamiques -->
+
+
     <meta property="og:title" content="{% block og_title %}Le Tombeau de Jacques Molai (français){% endblock %}">
     <meta property="og:description" content="{% block og_description %}Version française du Tombeau de Jacques Molai.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/Pochette_epub_47cf66.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
-
-{% block title %}Le Tombeau de Jacques Molai (français){% endblock %}
 
 {% block content %}
 

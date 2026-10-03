@@ -1,13 +1,17 @@
-
 {% extends "template.html" %}
 
-<meta property="og:title" content="{% block og_title %}Archives sur les Templiers et autres PDF{% endblock %}">
+{% block lang %}fr{% endblock %}
+{% block title %}Archives sur les Templiers{% endblock %}
+{% block description %}Une sélection de documents rassemblés au fil de mes recherches{% endblock %}
+{% block og_title %}Archives sur les Templiers{% endblock %}
+
+
+	<meta property="og:title" content="{% block og_title %}Archives sur les Templiers et autres PDF{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/Cross-Pattee.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}books{% endblock %}">
     
-{% block title %}Archives sur les Templiers{% endblock %}
 {% block content %}
 
     
