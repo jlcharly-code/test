@@ -29,6 +29,7 @@ ul, ol, h2 {
 }
 
 .cover-img {
+  width: 150px;
   max-width: 100%;
   height: auto;
 }
