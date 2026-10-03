@@ -2,7 +2,6 @@
 
 {% block title %}Les livres{% endblock %}
 {% block description %}Livres publiés par JL Charly : Le Tombeau de Jacques Molai (français, anglais, espagnol, portugais) et les Mémoires de Barruel.{% endblock %}
-{% block og_title %}Les livres{% endblock %}
 
 <!-- Balises Open Graph dynamiques -->
     <meta property="og:title" content="{% block og_title %}Les livres{% endblock %}">
@@ -11,13 +10,10 @@
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
     
-{% block title %}Les livres{% endblock %} 
-
 {% block content %}
 
 <div class="conteneur-principal">
 
-  <!-- BLOC PREMIER LIVRE (Image + Titres alignés proprement) -->
   <div class="bloc-livre">
   
     <div class="bloc-livre-texte">
@@ -46,7 +42,7 @@
     <a href="{{ url_for('o_sepulcro') }}" target="_blank" rel="noopener">Tradução em português</a>
   </div>
   <!-- BLOC SECOND LIVRE -->
-  <div class="bloc-livre"
+  <div class="bloc-livre">
     <div class="bloc-livre-texte">
       <h2>SECOND LIVRE : Mémoires pour servir à l'histoire du jacobinisme</h2>
       <p><a href="{{ url_for('memoires') }}">Découvrir cet ouvrage</a></p>
