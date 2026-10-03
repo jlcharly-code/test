@@ -29,9 +29,8 @@ ul, ol, h2 {
 }
 
 .cover-img {
-    width: 150px;             
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* --- ZONE DES DRAPEAUX --- */
