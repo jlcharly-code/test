@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}fr{% endblock %}" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Mes travaux d'édition{% endblock %}</title>
+  <meta name="description" content="{% block description %}Livres et archives sur les Templiers, par JL Charly.{% endblock %}">
+  <link rel="canonical" href="{{ url_for(request.endpoint, _external=True) }}">
+  {% block hreflang %}{% endblock %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+
+    <!-- Balises Open Graph dynamiques -->
+    <meta property="og:title" content="{% block og_title %}Mes travaux d'édition{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Découvrez les livres publiés par JL Charly.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/livre_ouvert.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-96x96.png') }}" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/favicon.svg') }}" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}" />
+	<meta name="apple-mobile-web-app-title" content="jlcharly-edition.fr" />
+	<link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}" />
+
+</head>
+<body>
+  <header>
+    <div class="container">
+		<p class="logo">Mes travaux d'édition</p>      
+	  <figure>
+		<img class="cover-img" src="https://res.cloudinary.com/dxcap6jy/image/upload/v1790993838/copy_of_copy_of_livre_ouvert_i8pxhi.webp" alt="livre ouvert" width="612" height="408"/>      
+	  </figure>
+      <nav>
+        <ul class="menu">
+          <li><a href="{{ url_for('home') }}">Première partie: Livres publiés et autres</a></li>
+          <li><a href="{{ url_for('templiers') }}">Seconde partie: Les PDF</a></li>
+          <li><a href="{{ url_for('about') }}">Au sujet du site</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Le contenu des autres pages s'insère ici -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

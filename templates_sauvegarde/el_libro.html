@@ -3,6 +3,7 @@
 {% block lang %}es{% endblock %}
 {% block title %}El Sepulcro de Jacques Molai, traducción al español{% endblock %}
 {% block description %}traducción al español de Le Tombeau de Jacques Molai, de Jean-Luc Charlier.{% endblock %}
+{% block og_title %}O Sepulcro de Jacques Molai, traducción al español{% endblock %}
 
 
 
@@ -12,7 +13,7 @@
   <link rel="alternate" hreflang="es" href="https://www.jlcharly-edition.fr/el-libro">
   <link rel="alternate" hreflang="pt" href="https://www.jlcharly-edition.fr/o-sepulcro">
 {% endblock %}
-	<meta property="og:title" content="{% block og_title %}El Sepulcro de Jacques Molai{% endblock %}">
+<meta property="og:title" content="{% block og_title %}El Sepulcro de Jacques Molai{% endblock %}">
     <meta property="og:description" content="{% block og_description %}Version espagnole du Tombeau de Jacques Molai.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/El_Sepulcro_epub_47cf66.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">

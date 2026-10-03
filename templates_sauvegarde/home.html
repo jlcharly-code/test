@@ -1,0 +1,80 @@
+{% extends "template.html" %} 
+
+{% block title %}Les livres{% endblock %}
+{% block description %}Livres publiés par JL Charly : Le Tombeau de Jacques Molai (français, anglais, espagnol, portugais) et les Mémoires de Barruel.{% endblock %}
+
+<!-- Balises Open Graph dynamiques -->
+    <meta property="og:title" content="{% block og_title %}Les livres publiés par JL Charly{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Découvrez les livres publiés par JL Charly.{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/livre_ouvert.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+{% block content %}
+
+<div class="conteneur-principal">
+
+  <div class="bloc-livre">
+  
+    <div class="bloc-livre-texte">
+      <h2>PREMIER LIVRE : "le tombeau de jacques molai"</h2>
+      <p>Il faudrait imaginer que l’histoire officielle n’est qu’un voile tendu sur une réalité bien plus secrète. 
+      Si l’Ordre du Temple s’est éteint dans les flammes des bûchers en 1312, son esprit, lui, n'aurait jamais cessé de voyager dans l'ombre. 
+      Au cours du XVIIIe siècle, alors que l'Europe des Lumières se passionnait pour l'occulte, une poignée d'initiés aurait ravivé la flamme endormie de la chevalerie à travers les rituels de la Stricte Observance.</p>
+    </div>
+  </div>
+
+  <!-- ZONE DE LIENS / LANGUES -->
+  <div class="zone-langues">
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/fr.webp') }}" alt="drapeau français" />
+    <a href="{{ url_for('le_livre') }}" target="_blank" rel="noopener">Edition française</a>
+    <span class="separateur">|</span>
+    
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/gb.webp') }}" alt="drapeau anglais" />
+    <a href="{{ url_for('the_book') }}" target="_blank" rel="noopener">English translation</a>
+    <span class="separateur">|</span>
+    
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/es.webp') }}" alt="drapeau espagnol" />                    
+    <a href="{{ url_for('el_libro') }}" target="_blank" rel="noopener">Traducción al español</a> 
+    <span class="separateur">|</span>  
+    
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/pt.webp') }}" alt="drapeau portugais" />
+    <a href="{{ url_for('o_sepulcro') }}" target="_blank" rel="noopener">Tradução em português</a>
+  </div>
+  <!-- BLOC SECOND LIVRE -->
+  <div class="bloc-livre">
+    <div class="bloc-livre-texte">
+      <h2>SECOND LIVRE : Mémoires pour servir à l'histoire du jacobinisme</h2>
+      <p><a href="{{ url_for('memoires') }}">Découvrir cet ouvrage</a></p>
+      <p>de L'Abbé Augustin Barruel</p>
+      <h3>Abrégé par E. Perrenet en 1911</h3>
+      <p>restructuré par Jean-Luc CHARLIER</p>
+     <p>Ces "Mémoires pour servir à l’histoire du jacobinisme", publié en 1797 et régulièrement réédité, 
+     vont diffuser la théorie d’une filiation entre les templiers, les francs-maçons et les jacobins. 
+     Ceux-ci sont accusés pêle-mêle de vouloir détruire le catholicisme (alors qu’une majorité des maçons sont à l’époque chrétiens, 
+     au point parfois de refuser dans leur sein des juifs) et la monarchie (alors qu’une bonne partie des maçons étaient nobles 
+     et que certains d’entre eux émigrèrent dès 1789). 
+     On peut lire ainsi dans son vaste ouvrage :</p>
+<p>« L’initié se change en assassin ; mais le Maître des Frères à venger n’est plus Hiram, c’est Molay, le Grand-Maître des Templiers ; 
+et celui qu’il faut tuer, c’est un Roi, c’est Philippe le Bel, sous qui l’ordre des Chevaliers du Temple fut détruit. »
+Puis, plus loin :</p>
+<p>« Tout, des Cathares aux Albigeois, aux Chevaliers du Temple, et ceux-ci aux Maçons Jacobins ; tout indique un père commun.
+Il se montre bien plus spécialement encore dans cette égalité et cette liberté désorganisatrices, 
+qui ne connoissent d’obéissance due ni aux puissances spirituelles, ni aux puissances temporelles. »
+Les thèses de Barruel, véritables pierres fondatrices du conspirationnisme, vont connaître une postérité à géométrie variable.</p>
+
+<p>Le jacobinisme est une idéologie politique née pendant la Révolution française, caractérisée par la défense de la souveraineté nationale, 
+de l'unité et de l'indivisibilité de la République, ainsi que par une forte centralisation de l'État. </p>
+
+<p>Historiquement, le terme désigne les membres du Club des Jacobins (dont Robespierre, Danton et Saint-Just), 
+qui ont dirigé la France lors de la période la plus radicale de la Révolution, incluant la Terreur (1793-1794). 
+
+Le jacobinisme prône l'égalité des citoyens devant la loi, la laïcité, et l'uniformisation administrative et culturelle du territoire.
+
+Dans le langage politique contemporain, un jacobin est souvent défini comme un partisan d'un pouvoir central fort et hostile à la décentralisation 
+ou au régionalisme, bien que le terme puisse aussi évoquer un engagement révolutionnaire pour la démocratie républicaine. </p>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

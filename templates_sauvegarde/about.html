@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block lang %}fr{% endblock %}
+
+
+<meta property="og:title" content="{% block og_title %}Au sujet du site{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}description du site{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/barruel.jpg{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    
+{% block title %}Au sujet du site{% endblock %}
+
+{% block content %}
+<h1>Pourquoi ?</h1>
+<p>C'est important, pour moi, de mettre en avant mes projets enfin réalisés.</p>
+<p>Ici, vous aurez un aperçu de mon travail de rédacteur, chercheur et d'éditeur.</p>
+<p>Dans la première partie se trouvent les livres publiés,entre autres, par Amazon.</p>
+<p>Dans la seconde vous trouverez des PDF à télécharger, en grande partie sur les templiers ou sur leur époque.</p>
+{% endblock %}

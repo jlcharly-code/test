@@ -1,0 +1,63 @@
+{% extends "template.html" %}
+
+{% block lang %}fr{% endblock %}
+{% block title %}Archives sur les Templiers{% endblock %}
+{% block description %}Une sélection de documents rassemblés au fil de mes recherches{% endblock %}
+{% block og_title %}Archives sur les Templiers{% endblock %}
+
+
+	<meta property="og:title" content="{% block og_title %}Archives sur les Templiers et autres PDF{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/Cross-Pattee.webp{% endblock %}">
+    <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
+    <meta property="og:type" content="{% block og_type %}books{% endblock %}">
+    
+{% block content %}
+
+    
+<h1>Archives sur les Templiers et autres PDF</h1>
+<p>Une sélection de documents rassemblés au fil de mes recherches, dont certaines missives originales et deux dossiers secrets.</p>
+
+<h2>Mes PDF's originaux</h2>
+<h3>Sur les Templiers</h3>
+
+<div class="document">
+  <h3>Le procès des templiers</h3>
+  <p>Parce que la torture a joué un rôle capital dans la ruine des Templiers , nous n'avons pas le droit de nous placer au point de vue de l'Inquisition 
+  et de regarder cette ruine comme légitime : au contraire , car, à défaut d'autre dette , nous en avons contracté une envers eux que nous n'avons , 
+  malheureusement, pas encore payée, à savoir le droit et le devoir qui incombe à notre temps et à tous les temps, de rendre justice à leur mémoire et à leurs souffrances . </p>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790890993/proc%C3%A8s_templiers.pdf" target="_blank" rel="noopener">Télécharger le PDF </a>
+</div>
+
+<div class="document">
+  <h3>Les francs-maçons et jacobites, héritiers des Templiers ?</h3>
+  <p>La figure mythique du Templier prit plusieurs formes, au sein de différents grades ou Rites maçonniques. 
+  En France, le grade maçonnique templier le plus important apparut vers 1750, 
+  sous la forme du Sublime Chevalier Élu, qui deviendra par la suite le Chevalier Kadosh, actuel hauts grades du REAA Écossais Ancien Accepté.</p>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790964943/Les_francs-ma%C3%A7ons_h%C3%A9ritiers_des_Templiers.pdf" target="_blank" rel="noopener">Télécharger le PDF</a>
+</div>
+
+<h4><strong>Dossiers</strong> secrets :</h4>
+
+<div class="document">
+  <h3>Les lettres de Roncelin de Fos — texte original (italien)</h3>
+  <p>Trois manuscrits de l'archive templière secrète de France (FM.P761/762/763),</p><p> des lettres 
+  attribuées au templier Roncelin de Fos adressées à Richard de Vichiers, datées de 1245, 1256 
+  et 1270.</p>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790718089/dossiers_secrets.pdf" target="_blank" rel="noopener">Télécharger le texte original (italien)</a>
+</div>
+
+<div class="document">
+  <h3>Les lettres de Roncelin de Fos — édition illustrée (français)</h3>
+  <p>Ma traduction française, réalisée en 2014, enrichie d'illustrations et de compléments historiques</p> <p>
+  (Pieusse, la bataille de La Forbie, la grotte de Niaux, le siège de Damiette).</p>
+  <a href="https://res.cloudinary.com/dxcap6jy/image/upload/v1790971985/Les_lettres_de_Roncelin_de_Fos_%C3%A9dition_illustr%C3%A9e.pdf" target="_blank" rel="noopener">Télécharger l'édition illustrée (français)</a>
+</div>
+
+<h3>Sur le Jacobisme</h3>
+
+
+
+
+
+{% endblock %}
