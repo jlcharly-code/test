@@ -1,5 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% block lang %}fr{% endblock %}
+{% block description %}English translation of Le Tombeau de Jacques Molai, by Jean-Luc Charlier.{% endblock %}
+{% block hreflang %}
+  <link rel="alternate" hreflang="fr" href="https://www.jlcharly-edition.fr/le-livre">
+  <link rel="alternate" hreflang="en" href="https://www.jlcharly-edition.fr/the-book">
+  <link rel="alternate" hreflang="es" href="https://www.jlcharly-edition.fr/el-libro">
+  <link rel="alternate" hreflang="pt" href="https://www.jlcharly-edition.fr/o-sepulcro">
+{% endblock %}
 {% extends "template.html" %}<!-- Balises Open Graph dynamiques -->
     <meta property="og:title" content="{% block og_title %}Le Tombeau de Jacques Molai (français){% endblock %}">
     <meta property="og:description" content="{% block og_description %}Version française du Tombeau de Jacques Molai.{% endblock %}">
@@ -7,14 +13,15 @@
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
 
-{% block content %}
-
 {% block title %}Le Tombeau de Jacques Molai (français){% endblock %}
 
+{% block content %}
+
+
 <h1 class="unnumbered" id="Le_livre">Le Tombeau de Jacques Molai</h1>
-<p><strong><u>Le voici: </u></strong></p> <p>En vente sur <a href="https://www.amazon.com/Tombeau-Jacques-Molai-annot%C3%A9-TEMPLIERS/dp/B0HG68J7F2/ref=sr_1_2"> target="_blank" rel="noopener"Le Tombeau de Jacques Molai</a>   </p>
+<p><strong><u>Le voici: </u></strong></p> <p>En vente sur <a href="https://www.amazon.com/…B0HG68J7F2" target="_blank" rel="noopener">Le Tombeau de Jacques Molai</a>.</p>
 <figure>
-  <img class="cover-img" src="https://res.cloudinary.com/dxcap6jy/image/upload/v1790796329/Pochette_epub_47cf66.webp"alt="Couverture du livre Le Tombeau de Jacques Molay par Jean-Luc Charlier" />
+  <img class="cover-img" src="https://res.cloudinary.com/dxcap6jy/image/upload/v1790796329/Pochette_epub_47cf66.webp" alt="Couverture du livre Le Tombeau de Jacques Molay par Jean-Luc Charlier" />
 </figure>
 <h2 class="unnumbered" id="la-4-page">la quatrième page:</h2>
 
@@ -29,9 +36,12 @@
 <p>Peu de temps après, les quatre loges secrètes créées par de Molay alors qu'il était emprisonné à la Bastille voient le jour aux quatre coins de l'Europe : Naples pour l'Orient, Édimbourg pour l'Occident, Stockholm pour le Nord, et Paris pour le Midi. </p> 
 
 <p><em>Ce livre se lit soit comme un roman, soit en historien.</em><p>
-</p>J’ai patiemment déchiffré et remis en page ce texte rare afin qu’il soit accessible au plus grand nombre de lecteurs.
-Bien que la nouvelle structure en chapitres permette de se repérer plus facilement, le texte original de Cadet de Gassicourt a été intégralement préservé dans son vieux français d'époque.
-Cette organisation moderne permet de mieux capter le message originel de l'auteur : une mise en garde sans concession contre certaines loges maçonniques, en démontrant leur rôle direct dans les coulisses de la Révolution française.<br /></p>
+<p>J’ai patiemment déchiffré et remis en page ce texte rare afin qu’il soit accessible au plus grand nombre de lecteurs.
+Bien que la nouvelle structure en chapitres permette de se repérer plus facilement, 
+le texte original de Cadet de Gassicourt a été intégralement préservé dans son vieux français d'époque.
+Cette organisation moderne permet de mieux capter le message originel de l'auteur : 
+une mise en garde sans concession contre certaines loges maçonniques, 
+en démontrant leur rôle direct dans les coulisses de la Révolution française.<br /></p>
 <p><strong>ce livre est complété par une analyse de la Clé des loges. </strong></p>
 
 
@@ -45,19 +55,29 @@ Cette organisation moderne permet de mieux capter le message originel de l'auteu
 <p>Cadet l'écrit pour la première fois en 1795.</p>
 <h3>Sa vie :</h3>
 <p>Officiellement, il est le fils de Louis Claude Cadet de Gassicourt et de Marie Thérèse Françoise Boisselet.</p>
-<p>Cependant, dans ses Mémoires, son ami le baron Thiébault prétend qu'il était le fruit des amours de Louis XV et de Marie Thérèse Françoise Boisselet.</p>
-<p>Son père souhaitait lui faire étudier la pharmacie, mais le jeune homme, qui rencontrait chez ses parents des hommes de lettres tels que d'Alembert, Buffon ou Condorcet, voulut se consacrer à la littérature.</p>
+<p>Cependant, dans ses Mémoires, son ami le baron Thiébault prétend qu'il était le fruit des amours de Louis XV et 
+de Marie Thérèse Françoise Boisselet.</p>
+<p>Son père souhaitait lui faire étudier la pharmacie, mais le jeune homme, qui rencontrait chez ses parents des hommes de lettres 
+tels que d'Alembert, Buffon ou Condorcet, voulut se consacrer à la littérature.</p>
 <p>Il fit des études de droit et devint avocat, plaidant avec éloquence et un certain succès.</p>
 <p>Le 8 janvier 1789, il épousa, à Paris, Madeleine Félicité Baudet.</p>
-<p>Lorsque la Révolution éclata, Cadet de Gassicourt y adhéra avec enthousiasme, mais il n'hésita pas à condamner les excès du Tribunal révolutionnaire.</p>
-<p>Il publia des chansons patriotiques et un "Cahier de réformes", ou "Vœux d'un ami de l'ordre". Accusé d'avoir participé au 13 vendémiaire à la tête de la section du Mont-Blanc en 1795, il fut condamné par contumace, ce qui l'obligea à se cacher trois ans dans le Berry. La condamnation fut annulée plus tard par le jury criminel de la Seine.</p>
+<p>Lorsque la Révolution éclata, Cadet de Gassicourt y adhéra avec enthousiasme, mais il n'hésita pas à condamner 
+les excès du Tribunal révolutionnaire.</p>
+<p>Il publia des chansons patriotiques et un "Cahier de réformes", ou "Vœux d'un ami de l'ordre". 
+Accusé d'avoir participé au 13 vendémiaire à la tête de la section du Mont-Blanc en 1795, 
+il fut condamné par contumace, ce qui l'obligea à se cacher trois ans dans le Berry. 
+La condamnation fut annulée plus tard par le jury criminel de la Seine.</p>
 <p>À son retour, il se mit à la pharmacie et fut nommé premier pharmacien de Napoléon en 1809.</p>
 <p>Il devint successivement membre de deux célèbres goguettes parisiennes : "les dîners du Vaudeville" et "le Caveau moderne".</p>
-<p>En outre, il publia de nombreux ouvrages sur les sciences, parmi lesquels, en 1803, un Dictionnaire de la chimie qui reprend les notions développées par Pierre Joseph Macquer quarante ans plus tôt, en les actualisant, grâce aux découvertes de Lavoisier notamment.</p>
+<p>En outre, il publia de nombreux ouvrages sur les sciences, parmi lesquels, en 1803, 
+un Dictionnaire de la chimie qui reprend les notions développées par Pierre Joseph Macquer quarante ans plus tôt, 
+en les actualisant, grâce aux découvertes de Lavoisier notamment.</p>
 <p>Il se moqua de Madame de Staël et de Chateaubriand.</p>
-<p>Pharmacien de Napoléon dans plusieurs campagnes, il participa à la création de la section pharmacie pour l'Académie de médecine, il contribua à faire établir le "Conseil de Salubrité de la ville de Paris" dont il fut secrétaire.</p>
+<p>Pharmacien de Napoléon dans plusieurs campagnes, il participa à la création de la section pharmacie pour l'Académie de médecine, 
+il contribua à faire établir le "Conseil de Salubrité de la ville de Paris" dont il fut secrétaire.</p>
 <p>Sous la Restauration, il s'opposa au droit divin.</p>
-<p>Il est inhumé au cimetière du Père-Lachaise (division 39) auprès de son fils, Félix Cadet de Gassicourt, pharmacien, et de son petit-fils, Ernest Cadet de Gassicourt, médecin, membre de l'Académie de médecine.</p>
+<p>Il est inhumé au cimetière du Père-Lachaise (division 39) auprès de son fils, Félix Cadet de Gassicourt, pharmacien, 
+et de son petit-fils, Ernest Cadet de Gassicourt, médecin, membre de l'Académie de médecine.</p>
 
 </div>
 {% endblock %}

@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% block lang %}es{% endblock %}
+{% block description %}English translation of Le Tombeau de Jacques Molai, by Jean-Luc Charlier.{% endblock %}
+{% block hreflang %}
+  <link rel="alternate" hreflang="fr" href="https://www.jlcharly-edition.fr/le-livre">
+  <link rel="alternate" hreflang="en" href="https://www.jlcharly-edition.fr/the-book">
+  <link rel="alternate" hreflang="es" href="https://www.jlcharly-edition.fr/el-libro">
+  <link rel="alternate" hreflang="pt" href="https://www.jlcharly-edition.fr/o-sepulcro">
+{% endblock %}
 {% extends "template.html" %}
 <meta property="og:title" content="{% block og_title %}El Sepulcro de Jacques Molai){% endblock %}">
     <meta property="og:description" content="{% block og_description %}Version espagnole du Tombeau de Jacques Molai.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/El_Sepulcro_epub_47cf66.webp{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+  
+  {% block title %}El Sepulcro de Jacques Molai, traducción al español{% endblock %}
+
     
 {% block content %}
 
-{% block title %}El Sepulcro de Jacques Molai, traducción al español{% endblock %}
 
 	
     
 <h1 class="unnumbered" id="El-libro">El Sepulcro de Jacques Molai</h1>
 <p><strong><u>El libro está aquí</u></strong></p>  <p>Se vende :<a href="https://www.amazon.com/gp/product/B0HK6BW1LL?storeType=ebooks" target="_blank" rel="noopener">El Sepulcro de Jacques Molai</a>   </p>
+<figure><figure>
   <img class="cover-img" src="https://res.cloudinary.com/dxcap6jy/image/upload/v1790796326/El_Sepulcro_epub_47cf66.webp" alt="capa del libro El Sepulcro de Jacques Molai para Jean-Luc Charlier"/>
 </figure>
 
@@ -27,10 +36,17 @@
 
 <h3 class="unnumbered" id=" Sinopsis"><strong> Sinopsis:</strong></h3>
 <p>"<strong>Toda la historia comienza con un acto clandestino :</strong></p>
-<p>la recuperación de las cenizas de Jacques de Molay, último gran maestre de la Orden del Temple, por parte de ocho templarios disfrazados de compañeros masones.</p> 
-<p>Poco tiempo después, las cuatro logias secretas creadas por de Molay mientras estaba prisionero en la Bastilla ven la luz en los cuatro puntos cardinales de Europa: Nápoles para el Oriente, Edimburgo para el Occidente, Estocolmo para el Norte y París para el Mediodía.</p>
+<p>la recuperación de las cenizas de Jacques de Molay, último gran maestre de la Orden del Temple, 
+por parte de ocho templarios disfrazados de compañeros masones.</p> 
+<p>Poco tiempo después, las cuatro logias secretas creadas por de Molay mientras estaba prisionero en la Bastilla 
+ven la luz en los cuatro puntos cardinales de Europa: Nápoles para el Oriente, Edimburgo para el Occidente, 
+Estocolmo para el Norte y París para el Mediodía.</p>
 <p><em>Este libro se lee ya sea como una apasionante novela o con ojos de historiador.</em><p>
-</p>He descifrado y maquetado pacientemente este texto raro para que sea accesible al mayor número posible de lectores. La traducción ha sido cuidadosamente trabajada para preservar la atmósfera y el tono solemne de la época, mientras que la nueva estructura en capítulos permite orientarse más fácilmente. Esta organización moderna permite captar mejor el mensaje original del autor: una advertencia sin concesiones contra ciertas logias masónicas, demostrando su papel directo entre los bastidores de la Revolución francesa.<br /></p>
+<p>He descifrado y maquetado pacientemente este texto raro para que sea accesible al mayor número posible de lectores. 
+La traducción ha sido cuidadosamente trabajada para preservar la atmósfera y el tono solemne de la época, 
+mientras que la nueva estructura en capítulos permite orientarse más fácilmente. 
+Esta organización moderna permite captar mejor el mensaje original del autor: 
+una advertencia sin concesiones contra ciertas logias masónicas, demostrando su papel directo entre los bastidores de la Revolución francesa.<br /></p>
 <p><strong>La obra se completa con el análisis exclusivo de "La Llave de las Logias".</strong></p>
 
 

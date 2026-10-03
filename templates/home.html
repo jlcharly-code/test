@@ -1,3 +1,11 @@
+{% block lang %}fr{% endblock %}
+{% block description %}English translation of Le Tombeau de Jacques Molai, by Jean-Luc Charlier.{% endblock %}
+{% block hreflang %}
+  <link rel="alternate" hreflang="fr" href="https://www.jlcharly-edition.fr/le-livre">
+  <link rel="alternate" hreflang="en" href="https://www.jlcharly-edition.fr/the-book">
+  <link rel="alternate" hreflang="es" href="https://www.jlcharly-edition.fr/el-libro">
+  <link rel="alternate" hreflang="pt" href="https://www.jlcharly-edition.fr/o-sepulcro">
+{% endblock %}
 {% extends "template.html" %} 
 
 <!-- Balises Open Graph dynamiques -->
@@ -17,8 +25,7 @@
   <div class="bloc-livre">
   
     <div class="bloc-livre-texte">
-      <h1>PREMIER LIVRE</h1>
-      <h2>le tombeau de jacques molai</h2>
+      <h2>PREMIER LIVRE : "le tombeau de jacques molai"</h2>
       <p>Il faudrait imaginer que l’histoire officielle n’est qu’un voile tendu sur une réalité bien plus secrète. 
       Si l’Ordre du Temple s’est éteint dans les flammes des bûchers en 1312, son esprit, lui, n'aurait jamais cessé de voyager dans l'ombre. 
       Au cours du XVIIIe siècle, alors que l'Europe des Lumières se passionnait pour l'occulte, une poignée d'initiés aurait ravivé la flamme endormie de la chevalerie à travers les rituels de la Stricte Observance.</p>
@@ -27,28 +34,27 @@
 
   <!-- ZONE DE LIENS / LANGUES -->
   <div class="zone-langues">
-    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/fr.webp') }}" />
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/fr.webp' alt="drapeau français") }}" />
     <a href="{{ url_for('le_livre') }}" target="_blank" rel="noopener">Edition française</a>
     <span class="separateur">|</span>
     
-    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/gb.webp') }}" />
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/gb.webp' alt="drapeau anglais") }}" />
     <a href="{{ url_for('the_book') }}" target="_blank" rel="noopener">English translation</a>
     <span class="separateur">|</span>
     
-    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/es.webp') }}" />					
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/es.webp' alt="drapeau espagnol") }}" />					
     <a href="{{ url_for('el_libro') }}" target="_blank" rel="noopener">Traducción al español</a> 
     <span class="separateur">|</span>  
     
-    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/pt.webp') }}" />
+    <img class="drapeaux-img" src="{{ url_for('static', filename='images/drapeaux/pt.webp' alt="drapeau portugais") }}" />
     <a href="{{ url_for('o_sepulcro') }}" target="_blank" rel="noopener">Tradução em português</a>
   </div>
 
   <!-- BLOC SECOND LIVRE -->
   <div class="bloc-livre">
     <div class="bloc-livre-texte">
-      <h1>SECOND LIVRE</h1>
-      <h2>Mémoires pour servir à l'histoire du jacobinisme</h2>
-      <a href="{{ url_for('memoires') }}" target="_blank" rel="noopener">Mémoires pour servir à l'histoire du jacobinisme</a>
+      <h2>SECOND LIVRE : Mémoires pour servir à l'histoire du jacobinisme</h2>
+      <a href="{{ url_for('memoires') }}"Mémoires pour servir à l'histoire du jacobinisme"</a>
       <p>de L'Abbé Augustin Barruel</p>
       <h3>Abrégé par E. Perrenet en 1911</h3>
       <p>restructuré par Jean-Luc CHARLIER</p>

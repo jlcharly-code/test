@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="{% block lang %}fr{% endblock %}" dir="ltr">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Mes travaux d'édition{% endblock %}</title>
+  <meta name="description" content="{% block description %}Livres et archives sur les Templiers, par JL Charly.{% endblock %}">
+  <link rel="canonical" href="{{ url_for(request.endpoint, _external=True) }}">
+  {% block hreflang %}{% endblock %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
 
     <!-- Balises Open Graph dynamiques -->

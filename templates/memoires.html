@@ -1,5 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% block lang %}fr{% endblock %}
+{% block description %}English translation of Le Tombeau de Jacques Molai, by Jean-Luc Charlier.{% endblock %}
+{% block hreflang %}
+  <link rel="alternate" hreflang="fr" href="https://www.jlcharly-edition.fr/le-livre">
+  <link rel="alternate" hreflang="en" href="https://www.jlcharly-edition.fr/the-book">
+  <link rel="alternate" hreflang="es" href="https://www.jlcharly-edition.fr/el-libro">
+  <link rel="alternate" hreflang="pt" href="https://www.jlcharly-edition.fr/o-sepulcro">
+{% endblock %}
 {% extends "template.html" %}
 
 <meta property="og:title" content="{% block og_title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}">
@@ -7,10 +13,12 @@
     <meta property="og:image" content="{% block og_image %}https://www.jlcharly-edition.fr/static/images/barruel.jpg{% endblock %}">
     <meta property="og:url" content="{{ url_for(request.endpoint, _external=True) }}">
     <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+ 
+{% block title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %} 
     
 {% block content %}
 	
-{% block title %}Mémoires pour servir à l’histoire du jacobinisme{% endblock %}
+
 <h1 class="unnumbered" id="jacobisme">Mémoires pour servir à l’histoire du jacobinisme</h1>
 
 <figure>
@@ -24,8 +32,8 @@ complément des recherches sur Cadet de Gassicourt.</p>
 La figure centrale est Augustin Barruel (1741-1820), prêtre jésuite exilé à Londres, 
 qui publie de 1797 à 1799 ses Mémoires pour servir à l'histoire du jacobinisme en cinq tomes.
 
-<p> 
-<em>C'est un essai de propagande contre-révolutionnaire qui structure la thèse en un triple complot :
+</p> 
+<p><em>C'est un essai de propagande contre-révolutionnaire qui structure la thèse en un triple complot :
 Son  livre  auquel  il  a  donné  le  titre  un  peu  trop  long de  Mémoires  pour  servir  à  l’ Histoire  du  Jacobinisme, 
 est l’œuvre  d'un  homme instruit et clairvoyant qui a connu personnellement les gens dont il parle,  
 qui a été mêlé  aux  événements  qu'il  raconte, qui  en  a  été  lui-même  la  victime  et  qui  peut dire  avec  autorité  :  
