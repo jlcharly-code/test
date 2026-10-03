@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-
 {% extends "template.html" %} 
+
+{% block title %}Les livres{% endblock %}
+{% block description %}Livres publiés par JL Charly : Le Tombeau de Jacques Molai (français, anglais, espagnol, portugais) et les Mémoires de Barruel.{% endblock %}
+{% block og_title %}Les livres{% endblock %}
 
 <!-- Balises Open Graph dynamiques -->
     <meta property="og:title" content="{% block og_title %}Les livres{% endblock %}">
@@ -44,10 +46,10 @@
     <a href="{{ url_for('o_sepulcro') }}" target="_blank" rel="noopener">Tradução em português</a>
   </div>
   <!-- BLOC SECOND LIVRE -->
-  <div class="bloc-livre">
+  <div class="bloc-livre"
     <div class="bloc-livre-texte">
       <h2>SECOND LIVRE : Mémoires pour servir à l'histoire du jacobinisme</h2>
-      <a href="{{ url_for('memoires') }}"Mémoires pour servir à l'histoire du jacobinisme"</a>
+      <p><a href="{{ url_for('memoires') }}">Découvrir cet ouvrage</a></p>
       <p>de L'Abbé Augustin Barruel</p>
       <h3>Abrégé par E. Perrenet en 1911</h3>
       <p>restructuré par Jean-Luc CHARLIER</p>
